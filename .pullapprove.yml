@@ -1,0 +1,39 @@
+  version: 3
+  pullapprove_conditions:
+  - "'WIP' not in title"
+  - "base.ref == 'master'"
+  - "'hotfix' not in labels"
+
+  groups:
+    prodteam:
+      conditions:
+      - "'.pullapprove.yml' in files"
+      reviewers:
+        teams:
+        - team-production
+      reviews:
+        required: 2
+        request: 1
+        request_order: random
+
+    leads:
+      conditions:
+      - "files.include('src/*').exclude('*.md')"
+      reviewers:
+        teams:
+        - leads
+      reviews:
+        required: 2
+        request: 1
+        request_order: random
+
+    developers:
+      conditions:
+      - "files.include('src/*').exclude('*.md')"
+      reviewers:
+        teams:
+        - developers
+      reviews:
+        required: 2
+        request: 1
+        request_order: random   

@@ -13,7 +13,7 @@
         - team-production
       reviews:
         required: 1
-        request: 1
+        request: 0
 
     leads:
       conditions:
@@ -23,7 +23,7 @@
         - leads
       reviews:
         required: 1
-        request: 1
+        request: 0
 
     developers:
       conditions:
@@ -34,4 +34,4 @@
         - leads
       reviews:
         required: 2
-        request: 2
+        request: 0

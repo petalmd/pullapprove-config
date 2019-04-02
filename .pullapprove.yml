@@ -7,34 +7,34 @@
   groups:
     prodteam:
       conditions:
-      - "'.pullapprove.yml' in files"
-      - "'Jenkinsfile' in files"
+      - "'*.yml' in files or 'Jenkinsfile' in files or '*Dockerfile*' in files or '*docker-compose*' in files"
       reviewers:
         teams:
         - team-production
       reviews:
-        required: 2
+        required: 1
         request: 1
         request_order: random
 
     leads:
       conditions:
-      - "files.include('src/*').exclude('*.md')"
+      - "files.include('*')"
       reviewers:
         teams:
         - leads
       reviews:
-        required: 2
+        required: 1
         request: 1
         request_order: random
 
     developers:
       conditions:
-      - "files.include('src/*').exclude('*.md')"
+      - "files.include('*')"
       reviewers:
         teams:
         - developers
+        - leads
       reviews:
         required: 2
-        request: 1
+        request: 2
         request_order: random   

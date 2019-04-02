@@ -8,6 +8,7 @@
     prodteam:
       conditions:
       - "'.pullapprove.yml' in files"
+      - "'Jenkinsfile' in files"
       reviewers:
         teams:
         - team-production

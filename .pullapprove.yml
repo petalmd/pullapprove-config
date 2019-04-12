@@ -1,37 +1,44 @@
-  version: 3
-  pullapprove_conditions:
-  - "'WIP' not in title"
-  - "base.ref == 'master'"
-  - "'hotfix' not in labels"
+version: 3
+pullapprove_conditions:
+- "'WIP' not in title"
+- "base.ref == 'master'"
+- "'hotfix' not in labels"
 
-  groups:
-    prodteam:
-      conditions:
-      - "'*.yml' in files or 'Jenkinsfile' in files or '*Dockerfile*' in files or '*docker-compose*' in files"
-      reviewers:
-        teams:
-        - team-production
-      reviews:
-        required: 1
-        request: 0
+groups:
+  prodteam:
+    conditions:
+    - "'*.yml' in files or 'Jenkinsfile' in files or '*Dockerfile*' in files or '*docker-compose*' in files"
+    reviewers:
+      teams:
+      - team-production
+    reviews:
+      required: 1
+      request: 0
 
-    leads:
-      conditions:
-      - "files.include('*')"
-      reviewers:
-        teams:
-        - leads
-      reviews:
-        required: 1
-        request: 0
+  leads:
+    reviewers:
+      teams:
+      - leads
+    reviews:
+      required: 1
+      request: 0
 
-    developers:
-      conditions:
-      - "files.include('*')"
-      reviewers:
-        teams:
-        - developers
-        - leads
-      reviews:
-        required: 2
-        request: 0
+  developers:
+    reviewers:
+      teams:
+      - developers
+      - leads
+    reviews:
+      required: 2
+      request: 0
+
+  libraries:
+    conditions:
+    - "'Gemfile*' in files or 'package.json' in files"
+    reviewers:
+      teams:
+      - leads
+      - team-production
+    reviews:
+      required: 2
+      request: 0

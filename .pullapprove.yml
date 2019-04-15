@@ -7,7 +7,7 @@ pullapprove_conditions:
 groups:
   prodteam:
     conditions:
-    - "'*.yml' in files or 'Jenkinsfile' in files or '*Dockerfile*' in files or '*docker-compose*' in files"
+    - "'*.yml' in files or 'Jenkinsfile' in files or '*Docker*' in files s or '*docker*' in files"
     reviewers:
       teams:
       - team-production

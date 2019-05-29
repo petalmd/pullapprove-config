@@ -6,7 +6,8 @@ pullapprove_conditions:
 
 groups:
   prodteam:
-    conditions: >-
+    conditions:
+    - >
       '*.yml' in files.exclude("*/locales/*") or
       'Jenkinsfile' in files or
       '*Docker*' in files or

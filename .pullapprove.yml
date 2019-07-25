@@ -46,5 +46,5 @@ groups:
       - leads
       - team-production
     reviews:
-      required: 2
+      required: 1
       request: 0

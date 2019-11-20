@@ -38,12 +38,22 @@ groups:
       required: 1
       request: 0
 
-  libraries:
+  libraries-be:
     conditions:
-    - "'Gemfile*' in files or 'package.json' in files"
+    - "'Gemfile*' in files"
     reviewers:
       teams:
-      - leads
+      - libraries-be
+      - team-production
+    reviews:
+      required: 1
+      request: 0
+  libraries-fe:
+    conditions:
+    - "'package.json' in files or 'tsconfig.json' in files"
+    reviewers:
+      teams:
+      - libraries-fe
       - team-production
     reviews:
       required: 1

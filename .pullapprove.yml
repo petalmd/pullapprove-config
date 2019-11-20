@@ -1,8 +1,12 @@
 version: 3
 pullapprove_conditions:
-- "'WIP' not in title"
-- "base.ref == 'master'"
-- "'hotfix' not in labels"
+- condition: "base.ref == 'master'"
+  unmet_status: success
+  explanation: "Review not required unless merging to master"
+- "'hotfix' not in labels"  # when using the string type, the default status is "success"
+- condition: "'WIP' not in title"
+  unmet_status: pending
+  explanation: "Work in progress"
 
 groups:
   prodteam:

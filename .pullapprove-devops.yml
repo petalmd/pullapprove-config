@@ -28,7 +28,6 @@ groups:
     - "files.include('*')"
     reviewers:
       users:
-        - mathcantin
         - yharkati
         - tdompierre-petalmd
     reviews:

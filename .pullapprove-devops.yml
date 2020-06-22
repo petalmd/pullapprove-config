@@ -13,7 +13,17 @@ pullapprove_conditions:
   explanation: "Waiting to send reviews as PR is in draft"
 
 groups:
-  developers:
+  lead:
+    conditions:
+    - "files.include('*')"
+    reviewers:
+      users:
+        - mathcantin
+    reviews:
+      required: 1
+      request: 1
+      author_value: 1
+  devops:
     conditions:
     - "files.include('*')"
     reviewers:
@@ -22,6 +32,7 @@ groups:
         - yharkati
         - tdompierre-petalmd
     reviews:
-      required: 1
-      request: 0
+      required: 2
+      request: 2
+      request_order: shuffle
 

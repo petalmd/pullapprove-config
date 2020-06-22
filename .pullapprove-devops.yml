@@ -20,7 +20,7 @@ groups:
       users:
         - mathcantin
         - yharkati
-        - tdompierre
+        - tdompierre-petalmd
     reviews:
       required: 1
       request: 0

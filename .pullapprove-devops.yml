@@ -28,10 +28,11 @@ groups:
     - "files.include('*')"
     reviewers:
       users:
+        - mathcantin
         - yharkati
         - tdompierre-petalmd
     reviews:
-      required: 1
-      request: 1
+      required: 2
+      request: 2
       request_order: shuffle
 

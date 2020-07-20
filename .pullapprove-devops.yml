@@ -29,7 +29,8 @@ groups:
     reviewers:
       users:
         - yharkati
-        - tdompierre-petalmd
+        - mcantin
+        # - tdompierre-petalmd
     reviews:
       required: 1
       request: 1

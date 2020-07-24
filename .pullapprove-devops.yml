@@ -29,7 +29,7 @@ groups:
     reviewers:
       users:
         - yharkati
-        - mcantin
+        - mathcantin
         # - tdompierre-petalmd
     reviews:
       required: 1

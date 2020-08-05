@@ -28,9 +28,8 @@ groups:
     - "files.include('*')"
     reviewers:
       users:
-        - yharkati
         - mathcantin
-        # - tdompierre-petalmd
+        - tdompierre-petalmd
     reviews:
       required: 1
       request: 1

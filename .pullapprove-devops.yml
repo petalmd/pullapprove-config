@@ -21,7 +21,7 @@ groups:
         - mathcantin
     reviews:
       required: 1
-      request: 1
+      request: 0
       author_value: 1
   devops:
     conditions:
@@ -32,6 +32,6 @@ groups:
         - tdompierre-petalmd
     reviews:
       required: 1
-      request: 1
+      request: 0
       request_order: shuffle
 

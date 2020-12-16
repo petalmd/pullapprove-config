@@ -11,7 +11,10 @@ pullapprove_conditions:
 - condition: "not draft"
   unmet_status: pending
   explanation: "Waiting to send reviews as PR is in draft"
-
+- condition: "'DO NOT MERGE' not in title"
+  unmet_status: failure
+  explanation: "Do not merge this PR"
+  
 groups:
   lead:
     conditions:

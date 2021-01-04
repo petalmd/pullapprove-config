@@ -33,6 +33,8 @@ groups:
       users:
         - mathcantin
         - tdompierre-petalmd
+        - Marc3001
+        - jlegalliard
     reviews:
       required: 1
       request: 1

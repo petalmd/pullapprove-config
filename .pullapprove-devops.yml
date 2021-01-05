@@ -30,11 +30,8 @@ groups:
     conditions:
     - "files.include('*')"
     reviewers:
-      users:
-        - mathcantin
-        - tdompierre-petalmd
-        - Marc3001
-        - jlegalliard
+      teams:
+        - devops
     reviews:
       required: 1
       request: 1

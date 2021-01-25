@@ -21,7 +21,7 @@ groups:
     - "files.include('*')"
     reviewers:
       users:
-        - tdompierre-petalmd
+        - tdompierre
     reviews:
       required: 1
       request: 1

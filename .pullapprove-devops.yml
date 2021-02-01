@@ -21,6 +21,7 @@ groups:
     - "files.include('*')"
     reviewers:
       users:
+        - mathcantin
         - tdompierre
     reviews:
       required: 1

@@ -26,7 +26,8 @@ groups:
     reviews:
       required: 1
       request: 1
-      author_value: 1
+      request_order: shuffle
+
   devops:
     conditions:
     - "files.include('*')"

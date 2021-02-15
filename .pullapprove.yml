@@ -12,7 +12,7 @@ pullapprove_conditions:
   explanation: "Waiting to send reviews as PR is in draft"
 
 groups:
-  prodteam:
+  devops:
     conditions:
     - >
       'config/*.yml' in files.exclude("*/locales/*") or
@@ -20,11 +20,13 @@ groups:
       '*Docker*' in files or
       '*docker*' in files
     reviewers:
-      teams:
-      - team-production
+      users:
+        - mathcantin
+        - tdompierre
     reviews:
       required: 1
-      request: 0
+      request: 1
+      request_order: shuffle
       author_value: 1
 
   leads:
@@ -51,17 +53,18 @@ groups:
     reviewers:
       teams:
       - libraries-be
-      - team-production
     reviews:
       required: 1
       request: 0
+      author_value: 1
+
   libraries-fe:
     conditions:
     - "'package.json' in files or 'tsconfig.json' in files"
     reviewers:
       teams:
       - libraries-fe
-      - team-production
     reviews:
       required: 1
       request: 0
+      author_value: 1

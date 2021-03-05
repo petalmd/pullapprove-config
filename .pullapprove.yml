@@ -20,9 +20,8 @@ groups:
       '*Docker*' in files or
       '*docker*' in files
     reviewers:
-      users:
-        - mathcantin
-        - tdompierre
+      teams:
+        - devops
     reviews:
       required: 1
       request: 0

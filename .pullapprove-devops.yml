@@ -27,7 +27,7 @@ groups:
       required: 1
       request: 1
       request_order: shuffle
-      author_value: 0
+      author_value: 1
 
   devops:
     conditions:

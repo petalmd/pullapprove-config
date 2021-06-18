@@ -48,14 +48,18 @@ groups:
 
   libraries-be:
     conditions:
-    - "'Gemfile*' in files"
+      ->
+        contains_any_fnmatches(files, [
+          "Gemfile*",
+          "db/migrate/*",
+          ])
     reviewers:
       teams:
       - libraries-be
     reviews:
       required: 1
       request: 0
-      author_value: 1
+      author_value: 0
 
   libraries-fe:
     conditions:

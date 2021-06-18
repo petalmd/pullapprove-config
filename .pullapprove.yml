@@ -48,11 +48,9 @@ groups:
 
   libraries-be:
     conditions:
-      ->
-        contains_any_fnmatches(files, [
-          "Gemfile*",
-          "db/migrate/*",
-          ])
+    - >
+      'Gemfile*' in files or
+      'db/migrate/*' in files
     reviewers:
       teams:
       - libraries-be

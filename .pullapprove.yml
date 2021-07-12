@@ -1,14 +1,14 @@
 version: 3
-pullapprove_conditions:
-- condition: "base.ref == 'master'"
-  unmet_status: success
+overrides:
+- if: "base.ref != 'master'"
+  status: success
   explanation: "Review not required unless merging to master"
-- "'hotfix' not in labels"  # when using the string type, the default status is "success"
-- condition: "'WIP' not in title"
-  unmet_status: pending
+- "'hotfix' in labels"  # when using the string type, the default status is "success"
+- if: "'WIP' in title"
+  tatus: pending
   explanation: "Work in progress"
-- condition: "not draft"
-  unmet_status: pending
+- if: "draft"
+  status: pending
   explanation: "Waiting to send reviews as PR is in draft"
 
 groups:

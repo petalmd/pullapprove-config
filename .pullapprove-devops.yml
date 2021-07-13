@@ -8,9 +8,9 @@ overrides:
 - if: "draft or 'WIP' in title"
   status: pending
   explanation: "Work in progress"
-# - if: "'DO NOT MERGE' in title"
-#   status: failure
-#   explanation: "Do not merge this PR"
+- if: "'DO NOT MERGE' in title"
+  status: failure
+  explanation: "Do not merge this PR"
   
 groups:
   lead:

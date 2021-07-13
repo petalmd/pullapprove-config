@@ -4,7 +4,8 @@ overrides:
 - if: "base.ref != 'master'"
   status: success
   explanation: "Review not required unless merging to master"
-# - "'hotfix' in labels"  # when using the string type, the default status is "success"
+- if: "'hotfix' in labels"
+  status: success
 - if: "draft or 'WIP' in title"
   status: pending
   explanation: "Work in progress"

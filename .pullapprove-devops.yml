@@ -4,16 +4,13 @@ overrides:
 - if: "base.ref != 'master'"
   status: success
   explanation: "Review not required unless merging to master"
-- "'hotfix' in labels"  # when using the string type, the default status is "success"
-- if: "'WIP' in title"
-  status: pending
-  explanation: "Work in progress"
-- if: "draft"
-  status: pending
-  explanation: "Waiting to send reviews as PR is in draft"
-- if: "'DO NOT MERGE' in title"
-  status: failure
-  explanation: "Do not merge this PR"
+# - "'hotfix' in labels"  # when using the string type, the default status is "success"
+# - if: "draft or 'WIP' in title"
+#   status: pending
+#   explanation: "Work in progress"
+# - if: "'DO NOT MERGE' in title"
+#   status: failure
+#   explanation: "Do not merge this PR"
   
 groups:
   lead:

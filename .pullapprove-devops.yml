@@ -1,7 +1,7 @@
 version: 3
 
 overrides:
-- if: "base.ref != 'master'"
+- if: "base.ref != 'master' and base.ref != 'migration'"
   status: success
   explanation: "Review not required unless merging to master"
 - if: "'hotfix' in labels"

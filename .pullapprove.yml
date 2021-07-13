@@ -1,8 +1,8 @@
 version: 3
 overrides:
-- if: "base.ref != 'master'"
+- if: "base.ref != 'master' and base.ref != 'migration'"
   status: success
-  explanation: "Review not required unless merging to master"
+  explanation: "Review not required unless merging to master or migration"
 - "'hotfix' in labels"  # when using the string type, the default status is "success"
 - if: "'WIP' in title"
   tatus: pending
